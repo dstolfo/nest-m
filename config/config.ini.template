@@ -1,0 +1,9 @@
+
+[build]
+node_dir=./node_modules
+public_dir=./public_dist
+
+; general web server configurations
+[web_server]
+domain=
+port=

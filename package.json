@@ -1,0 +1,27 @@
+{
+    "name": "nest_m",
+    "repository": {
+        "type": "git",
+        "url": ""
+    },
+    "devDependencies": {
+        "browserify": "8.1.3",
+        "browserify-shim": "3.8.2",
+        "vinyl-transform": "1.0.0",
+        "gulp": "3.8.0",
+        "gulp-notify": "1.2.1",
+        "gulp-uglify": "1.1.0",
+        "gulp-jshint": "1.9.2",
+        "merge-stream": "0.1.7",
+        "ini": "1.3.3",
+        "del": "1.1.1",
+        "run-sequence": "1.0.2",
+        "optimist": "0.6.1",
+        "glob": "5.0.3"
+    },
+    "dependencies": {
+        "jquery": "1.11.2",
+        "bootstrap": "3.3.2",
+        "underscore": "1.8.2"
+    }
+}

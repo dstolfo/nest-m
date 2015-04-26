@@ -1,0 +1,7 @@
+include requirements.txt
+include package.json
+include gulpfile.js
+
+recursive-include web *
+recursive-include config *
+recursive-include public_dist *

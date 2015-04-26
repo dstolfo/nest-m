@@ -1,0 +1,40 @@
+
+# nest_m git-ignored files
+
+config/config.ini # local config file
+public_dist/      # local static resources dir
+python/           # virtualenv
+node_modules/     # npm install
+
+logs/
+*.log
+
+
+
+# Python
+# Distribution / packaging
+build/
+dist/
+*.egg-info
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+
+# OSX
+.DS_Store
+.AppleDouble
+.LSOverride
+.Spotlight-V100
+.Trashes
+
+# Linux
+*~
+# KDE directory preferences
+.directory
+
+# Windows
+# Windows image file caches
+Thumbs.db
+ehthumbs.db
+# Folder config file
+Desktop.ini
