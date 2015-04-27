@@ -1,10 +1,14 @@
 
 # nest_m git-ignored files
 
-config/config.ini # local config file
-public_dist/      # local static resources dir
-python/           # virtualenv
-node_modules/     # npm install
+# local config file
+config/config.ini
+# local static resources dir
+public_dist/
+# virtualenv
+python/
+# npm install
+node_modules/
 
 logs/
 *.log
