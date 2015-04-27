@@ -1,0 +1,15 @@
+
+{% extends "base.html" %}
+
+{% block body %}
+<div class="site_content_header row">
+  <div class="col-sm-12">
+    <h2>Hello World</h2>
+  </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+  {{ super() }}
+  <script src="static/js/home.js"></script>
+{% endblock %}

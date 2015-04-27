@@ -1,9 +1,9 @@
 
 
-import tornado.web
+from lib.tornado.web import BaseHandler
 
 
-class HomeHandler(tornado.web.RequestHandler):
+class HomeHandler(BaseHandler):
 
     def get(self):
-        self.write("Hello, World")
+        self.render_j("home.html")

@@ -18,7 +18,7 @@ class NestMApplication(tornado.web.Application):
 
         settings = dict(
             template_path=os.path.join(os.path.dirname(__file__), "templates"),
-            static_path=os.path.join(os.path.dirname(__file__), "static"),
+            static_path=os.path.join(config['build']['public_dir'])
         )
         tornado.web.Application.__init__(self, handlers, **settings)
 
