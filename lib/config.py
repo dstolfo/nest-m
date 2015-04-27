@@ -7,12 +7,12 @@ import lib
 from configparser import ConfigParser
 
 
-# LOCAL_INI file located at analytics-web/config/config.ini
+# LOCAL_INI file located at nest_m/config/config.ini
 _CORE = sys.modules.get(lib.__name__)
 _CORE_PATH = os.path.dirname(os.path.abspath(_CORE.__file__))
 LOCAL_INI = os.path.abspath(
     os.path.join(_CORE_PATH, os.pardir, 'config', 'config.ini'))
-# SYSTEM_INI file located at /etc/ltv/analytics-web.ini
+# SYSTEM_INI file located at /etc/nest_m/config.ini
 SYSTEM_INI = os.path.abspath(
     os.path.join(os.path.sep, 'etc', 'nest_m', 'config.ini'))
 

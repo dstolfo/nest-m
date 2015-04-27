@@ -12,7 +12,7 @@ var gulp = require('gulp'),
 var local_ini = './config/config.ini';
 config = ini.parse(fs.readFileSync(local_ini, 'utf-8'));
 
-// copy static files from analytics-web applications to public_dist
+// copy static files to public_dist
 gulp.task('copy_static', function() {
     return gulp.src(["./web/nest_m/static/**/*"])
         .pipe(gulp.dest(config.build.public_dir));

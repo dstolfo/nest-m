@@ -1,4 +1,4 @@
-""" analytics-web setuptools """
+""" nest_m setuptools """
 
 import os
 import subprocess
@@ -12,8 +12,8 @@ import setuptools.command.install
 from setuptools import setup, find_packages
 from pip.req import parse_requirements
 
-# analytics-web version
-__VERSION__ = "v0.0.7"
+# nest_m version
+__VERSION__ = "v0.0.1"
 
 # get path to npm command for environment
 npm_cmd = os.popen('which npm').read().rstrip()
@@ -161,7 +161,7 @@ setup(
     version=__VERSION__,
     author="David Stolfo",
     author_email="david.stolfo@gmail.com",
-    #url="",
+    url="https://github.com/dstolfo/nest_m",
     description="Nest+m course material",
     install_requires=reqs,
     packages=find_packages(),
