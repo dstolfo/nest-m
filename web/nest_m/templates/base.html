@@ -1,0 +1,52 @@
+
+<!DOCTYPE html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+
+    <title>Nest+m Coding Course Material | {% block page_title %}{% endblock %}</title>
+
+    {% block head %}{% endblock %}
+
+    {% block css %}
+      <link href={{ static_url("bootstrap/css/bootstrap.min.css") }} rel="stylesheet">
+      <link href={{ static_url("bootstrap-datepicker/css/bootstrap-datepicker3.min.css") }} rel="stylesheet">
+      <link rel="stylesheet" href={{ static_url("css/fonts.css") }} type="text/css">
+      <link rel="stylesheet" href={{ static_url("css/style.css") }} type="text/css">
+    {% endblock %}
+  </head>
+  <body>
+    <header id="site_header">
+    {% block header %}
+      <div id="site_nav">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-12">
+              <nav class="navbar">
+                <div class="navbar-header">
+                  <a href="/" class="logo">Nest+m Coding</a>
+                </div>
+                <div class="collapse navbar-collapse">
+                  <ul class="nav navbar-nav">
+                    <li><a href="#">Network Trends</a></li>
+                  </ul>
+                </div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+    {% endblock %}
+    </header>
+
+    <div id="site_body">
+      <div id="site_content" class="container">
+        {% block body %}{% endblock %}
+      </div>
+    </div>
+
+    <footer id="site_footer"></footer>
+
+    {% block scripts %}
+    {% endblock %}
+  </body>
+</html>
