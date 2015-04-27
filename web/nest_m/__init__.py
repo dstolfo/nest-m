@@ -2,7 +2,7 @@
 import os
 import tornado.web
 
-from lib.config import config
+#from lib.config import config
 from web.nest_m.amiup import AmIUpHandler
 from web.nest_m.home import HomeHandler
 from web.nest_m.slides import CourseSlides1Handler
@@ -20,7 +20,8 @@ class NestMApplication(tornado.web.Application):
 
         settings = dict(
             template_path=os.path.join(os.path.dirname(__file__), "templates"),
-            static_path=os.path.join(config['build']['public_dir'])
+            #static_path=os.path.join(config['build']['public_dir'])
+            static_path="./public_dist"
         )
         tornado.web.Application.__init__(self, handlers, **settings)
 

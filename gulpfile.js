@@ -9,8 +9,14 @@ var gulp = require('gulp'),
     del = require('del');
 
 // read local configuration file
-var local_ini = './config/config.ini';
-config = ini.parse(fs.readFileSync(local_ini, 'utf-8'));
+//var local_ini = './config/config.ini';
+//config = ini.parse(fs.readFileSync(local_ini, 'utf-8'));
+config = {
+    "build": {
+        "public_dir": "./public_dist",
+        "node_dir": "./node_modules"
+    }
+}
 
 // copy static files to public_dist
 gulp.task('copy_static', function() {
@@ -54,4 +60,5 @@ gulp.task('build', function(cb) {
     runSequence('clean', ['browserify', 'bootstrap', 'reveal.js'], cb);
 });
 
+gulp.task('heroku', ['build']);
 gulp.task('default', ['build']);
