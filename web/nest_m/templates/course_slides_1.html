@@ -1,0 +1,19 @@
+
+{% extends "base_slides.html" %}
+
+{% block body %}
+<div class="reveal">
+  <div class="slides">
+    <section>Single Horizontal Slide</section>
+    <section>
+        <section>Vertical Slide 1</section>
+        <section>Vertical Slide 2</section>
+    </section>
+  </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+  {{ super() }}
+  <script src="static/js/course_slides_1.js"></script>
+{% endblock %}

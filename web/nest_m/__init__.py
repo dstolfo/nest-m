@@ -5,6 +5,7 @@ import tornado.web
 from lib.config import config
 from web.nest_m.amiup import AmIUpHandler
 from web.nest_m.home import HomeHandler
+from web.nest_m.slides import CourseSlides1Handler
 
 
 class NestMApplication(tornado.web.Application):
@@ -14,6 +15,7 @@ class NestMApplication(tornado.web.Application):
         handlers = [
             (r"/amiup", AmIUpHandler),
             (r"/", HomeHandler),
+            (r"/slides_1", CourseSlides1Handler),
         ]
 
         settings = dict(

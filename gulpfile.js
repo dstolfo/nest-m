@@ -31,9 +31,18 @@ gulp.task('browserify', ['copy_static'], function() {
 });
 
 // bundle bootstrap resources for browser
-gulp.task('bootstrap_shared', function() {
+gulp.task('bootstrap', function() {
     return gulp.src([config.build.node_dir + '/bootstrap/dist/**/*'])
         .pipe(gulp.dest(config.build.public_dir + '/bootstrap'));
+});
+
+// bundle reveal.js resources for browser
+gulp.task('reveal.js', function() {
+    var lib = gulp.src([config.build.node_dir + '/reveal.js/lib/**/*'])
+        .pipe(gulp.dest(config.build.public_dir + '/lib'));
+    var css = gulp.src([config.build.node_dir + '/reveal.js/css/**/*'])
+        .pipe(gulp.dest(config.build.public_dir + '/reveal'));
+    return merge(lib, css);
 });
 
 // clean ./public_dist
@@ -42,7 +51,7 @@ gulp.task('clean', function(cb) {
 });
 
 gulp.task('build', function(cb) {
-    runSequence('clean', ['browserify', 'bootstrap_shared'], cb);
+    runSequence('clean', ['browserify', 'bootstrap', 'reveal.js'], cb);
 });
 
 gulp.task('default', ['build']);

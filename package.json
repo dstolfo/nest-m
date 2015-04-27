@@ -22,6 +22,10 @@
     "dependencies": {
         "jquery": "1.11.2",
         "bootstrap": "3.3.2",
-        "underscore": "1.8.2"
+        "underscore": "1.8.2",
+        "reveal.js": "3.0.0"
+    },
+    "browser": {
+        "reveal.js": "./node_modules/reveal.js/js/reveal.js"
     }
 }
