@@ -60,5 +60,5 @@ gulp.task('build', function(cb) {
     runSequence('clean', ['browserify', 'bootstrap', 'reveal.js'], cb);
 });
 
-gulp.task('heroku', ['build']);
+gulp.task('heroku:', ['build']);
 gulp.task('default', ['build']);

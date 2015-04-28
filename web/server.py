@@ -1,4 +1,5 @@
 
+import os
 import tornado.httpserver
 import tornado.ioloop
 import tornado.options
@@ -16,7 +17,7 @@ def main():
 
     http_server = tornado.httpserver.HTTPServer(
         NestMApplication())
-    http_server.listen(options.port or 5000)
+    http_server.listen(options.port or os.environ.get('PORT', 5000))
         #int(config['web_server']['port']))
     tornado.ioloop.IOLoop.instance().start()
 
