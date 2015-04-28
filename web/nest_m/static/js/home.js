@@ -1,3 +1,3 @@
+var $ = jQuery =  require('jquery');
 
-
-alert('hello world');
+$(document).ready(function () {});
