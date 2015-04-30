@@ -1,0 +1,23 @@
+
+/*.slides img {*/
+    /*border: none;*/
+/*}*/
+
+.slides p {
+    text-align: left;
+}
+
+.slides .center {
+    text-align: center;
+}
+
+.slides section img {
+    border: none; !important
+}
+
+
+#terminal {
+    width: 150px;
+    height: 150px;
+    float: left;
+}

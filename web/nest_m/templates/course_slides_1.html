@@ -1,15 +1,137 @@
 
 {% extends "base_slides.html" %}
 
+{% block head %}
+<title>Getting started with Python</title>
+
+<meta name="description" content="NEST+M Coding Course -- Using Python like a Software Engineer">
+<meta name="author" content="David Stolfo">
+{% endblock %}
+
 {% block body %}
 <div class="reveal">
   <div class="slides">
-    <section>Single Horizontal Slide</section>
     <section>
-        <section>Vertical Slide 1</section>
-        <section>Vertical Slide 2</section>
+      <h3>Getting started with Python<h3>
+      <p class="center">
+        <small>How to interact with Python like a software engineer</small>
+      </p>
     </section>
-  </div>
+    <section>
+      <h3>Mac OSX</h3>
+      <img style="float: left; margin-right: 25px;" id="terminal" alt="terminal" data-src="static/img/terminal.png" />
+      <div style="width: auto; padding-top: 2px;">
+        <p>
+          On Mac OSX or Linux operating systems accessing Python is best done through the Terminal application.
+        </p>
+      </div>
+      <br style="clear: left;" />
+      <img id="mac_shell" alt="mac_shell" data-src="static/img/mac_shell.png" />
+    </section>
+    <section>
+      <h3>Windows</h3>
+      <p>
+        Using Windows is slightly different, however you can similarly use the run application.
+      </p>
+      <img style="margin-top: 50px; float: left;"id="run_command" alt="run_command" data-src="static/img/run_command.png" />
+      <img id="windows_shell" alt="windows_shell" data-src="static/img/windows_shell.png" />
+    </section>
+    <section>
+      <h3>Read-Eval-Print-Loop, REPL</h3>
+      <p>
+        The intent of using Python from Terminal/Run, is so that we may interact with Python's REPL--often referred
+        to as the Python Interpeter.
+      </p>
+    </section>
+    <section>
+      <img id="python_repl" alt="python_repl" data-src="static/img/python_repl.png" />
+    </section>
+    <section>
+      <h3>The Python Interpreter</h3>
+      <p>
+        The interpreter is an extremely valuable tool because it allows you test code as you write it, as well as
+        interact with the software modules in your environment.
+      </p>
+    </section>
+    <section>
+      <h3>Using the Interpreter</h3>
+      <img id="python_repl_code" alt="python_repl_code" data-src="static/img/python_repl_code.png" />
+    </section>
+    <section>
+      <h3>The Python Standard Library</h3>
+      <p>
+        By default the Python language comes with a set of modules and packages immediately available in any
+        environment.
+      </p>
+      <p>
+        These modules provide basic functionality and interfaces for interacting with different things.
+      </p>
+      <p>
+        For example,
+      </p>
+      <p><code>'import os'</code> provides basic functions for interacting with the operating system.</p>
+      <p><code>'import urllib'</code>gives a basic set of tools for parsing and constructing web addresses.</p>
+    </section>
+    <section>
+      <p>
+        The list of available tools in the Python Standard Library is very extensive and
+        being familiar with its features is extremely valuable and can teach you the blueprint of how to write Python software.
+      </p>
+      <p><small>
+        <a href="http://bit.ly/1P0hBP3">The Python Standard Library By Example, by Doug Hellmann</a>
+      </small></p>
+    </section>
+    <section>
+      <h3>The Python Package Index</h3>
+      <p>
+        Python is known for its feature of <strong>Fast Prototyping</strong>.
+      </p>
+      <p>
+        What that really means is the community has allowed
+        Python to be highly extensible by providing a number of additional packages and software tools that you can
+        instantly download and incorporate into your application.
+      </p>
+      <p>
+        When writing Python software, if you'd like to use a package or framework already available to the community,
+        you simply have to install it, and it becomes available to you to import just like any standard library.
+      </p>
+    </section>
+    <section>
+      <p>You can find an entire list of community packages available to download at <a href="http://bit.ly/1JU6MMR">pypi.python.org</a></p>
+    </section>
+    <section>
+      <p>Installing packages from PyPi can be done using the <code>pip</code> tool.</p>
+      <code>pip install <em>package-name</em></code>
+      <br /><br /><br />
+      <p><small>
+        * if your computer says <code style="margin-left: 5px">pip: command not defined</code>
+        <br />
+        execute the following <code style="margin-left: 5px">easy_install pip</code>
+      </small></p>
+    </section>
+    <section>
+      <h3>Using pip</h3>
+      <img id="pypi" alt="pypi" data-src="static/img/pypi.png" />
+    </section>
+    <section>
+      <h3>Exercise 1</h3>
+      <ul>
+        <li>Investigate PyPi</li>
+        <li>Download and install a package</li>
+        <li>Interact with that package through the Python Interpreter</li>
+      </ul>
+    </section>
+    <section>
+      <p>Hint: If you receive errors stating 'Permission Denied', run the following:<p>
+      <code>
+          >> pip install virtualenv<br />
+          >> virtualenv python<br />
+          >> source python/bin/activate
+      </code>
+      <br /><br /><br /><br />
+      <small>* This is jumping ahead a bit, but should resolve premission issues and give a hint as to what is to come</small>
+    </section>
+   </div>
 </div>
 {% endblock %}
 
