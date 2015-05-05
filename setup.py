@@ -21,7 +21,9 @@ node_bin = os.popen("%s bin" % npm_cmd).read().rstrip()
 
 # get requirements list from requirements.txt
 install_reqs = parse_requirements(os.path.join(
-    os.path.dirname(os.path.realpath(__file__)), 'requirements.txt'))
+    os.path.dirname(os.path.realpath(__file__)), 'requirements.txt'),
+    session=False
+)
 reqs = [str(ir.req) for ir in install_reqs]
 
 get_data_files = lambda root_dir: \
